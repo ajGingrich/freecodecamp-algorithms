@@ -1,6 +1,6 @@
-
 var sum = 0;
 var index = 0;
+
 
 function pairwise(arr, arg) {
     var matched = false;
@@ -10,7 +10,7 @@ function pairwise(arr, arg) {
         //check the first one
         for (var i=1; i<arr.length; i++) {
             if (arr[0] + arr[i] === arg) {
-                
+
                 sum += (2 *index) + arr.indexOf(arr[i]);
                 //console.log("sum: " + sum);
 
