@@ -8,10 +8,8 @@ function sumFibs(num) {
 
         if (fib[i] > num) {
             fib.splice(i);
-            console.log("This is gay");
             break;
         }
-        console.log(fib);
     }
     //only sum odd fibs
     var sum = 0;
