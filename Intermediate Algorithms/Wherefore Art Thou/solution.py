@@ -1,15 +1,9 @@
 def what_is_in_a_name(collection, source):
-    return filter(not_included, collection)
+    res = collection[:]
+    for i in range(len(source)):
+        key, value = source.items()[i]
+        res = filter(lambda x: key in x and value == x[key], res)
+    return res
 
-
-def not_included(item):
-    source = {'a': 1}
-    for key, value in source.items():
-        dictionary = {key: value}
-        if item == dictionary:
-            return False
-        else:
-            return True
-
-result = what_is_in_a_name([{"a": 1}, {"a": 1}, {"a": 1, "b": 2}], {"a": 1})
+result = what_is_in_a_name([{"a": 1, "b": 2}, {"a": 1}, {"a": 1, "b": 2, "c": 2}], {"a": 1, "c": 2})
 print(result)
