@@ -17,13 +17,6 @@ function updateInventory(arr1, arr2) {
     //sort by second column
     function compareSecondColumn(a, b) {
         return a[1] > b[1];
-        //return (a[1] < b[1]) ? -1 : 1;
-        /*if (a[1] === b[1]) {
-         return 0;
-         }
-         else {
-         return (a[1] < b[1]) ? -1 : 1;
-         }*/
     }
     arr1.sort(compareSecondColumn);
     return arr1;
